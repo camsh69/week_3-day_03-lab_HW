@@ -8,17 +8,11 @@
 </head>
 <body>
     <h1>Vintage Guitar Orders</h1>
-    
-    {% for order in orders %}
-    <div>
-    <h2><a href = "/order/{{loop.index0}}">{{order.customer_name}}</a></h2> 
+    <h2>{{order.customer_name}}:</h2>
     <p>Order date: {{order.order_date}}</br>
-        <!-- Quantity: {{order.quantity}}</br>
-        {{order.guitar_name}}, {{order.model_year}} -->
-        <hr>
-    </div>
-    {% endfor %}
-
-    
+        Quantity: {{order.quantity}}</br>
+        {{order.guitar_name}}, {{order.model_year}}
+    </p>
+    <a href = "/orders">Back</a>
 </body>
 </html>
