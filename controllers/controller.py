@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template
-from models.order import order
+from models.order_list import orders
 
-@app.route('/')
+@app.route('/orders')
 def index():
-    pass
+    return render_template('index.html', title="Home", orders=orders)
