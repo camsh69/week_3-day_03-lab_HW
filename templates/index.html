@@ -7,6 +7,17 @@
     <title>{{title}} - Guitar Store</title>
 </head>
 <body>
+    <h1>Vintage Guitar Orders</h1>
+    {% for order in orders %}
+    <div>
+    <h2>{{order.customer_name}}:</h2>
+    <p>Order date: {{order.order_date}}</br>
+        Quantity: {{order.quantity}}</br>
+        {{order.guitar_name}}, {{order.model_year}}
+    </p>
+</div>
+{% endfor %}
+
     
 </body>
 </html>
